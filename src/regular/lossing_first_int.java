@@ -5,7 +5,7 @@ public class lossing_first_int {
         // 原地哈希
         // 将数组中的数重新排序放到num-1的位置，这样遍历的时候就知道哪个没出现
         int n = nums.length;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {               // 避免死循环
             while (nums[i] > 0 && nums[i] <= n && nums[nums[i]-1] != nums[i]) {
                 int tmp = nums[i];
                 nums[i] = nums[nums[i] - 1];
